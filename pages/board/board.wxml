@@ -1,38 +1,335 @@
 <view class="container">
+
   <view class="score-screen">
-    <text class="screen-text">15 : 20</text>
+    <text class="screen-text">{{redTotalScore}} : {{blueTotalScore}}</text>
+  </view>
+  <view class="red-dot"></view>
+  <view class="blue-dot"></view>
+
+  <view class="card card-r flex-column">
+    <view class="flex-row flex-cell">
+      <view class="flex-cell flex-column">
+        <view class="flex-row flex-cell">
+          <view class="flex-cell-text">
+            珠宝
+          </view>
+        </view>
+        <view class="flex-row flex-cell">
+          <view class="flex-cell" bindtap="razm">
+            <image class="counter-button" src="/images/mines.png"></image>
+          </view>
+          <view class="flex-cell">{{raz}}</view>
+          <view class="flex-cell" bindtap="raza">
+            <image class="counter-button" src="/images/add.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="flex-cell">
+        <view class="flex-row flex-cell">
+          <view class="flex-cell-text">
+            符文
+          </view>
+        </view>
+        <view class="flex-row flex-cell">
+          <view class="flex-cell" bindtap="rafm">
+            <image class="counter-button" src="/images/mines.png"></image>
+          </view>
+          <view class="flex-cell">{{raf}}</view>
+          <view class="flex-cell" bindtap="rafa">
+            <image class="counter-button" src="/images/add.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="flex-row flex-cell">
+      <view class="flex-cell">
+        <view class="flex-row flex-cell">
+          <view class="flex-cell-text">
+            停靠
+          </view>
+        </view>
+        <view class="flex-row flex-cell">
+          <view class="flex-cell" bindtap="ratm">
+            <image class="counter-button" src="/images/mines.png"></image>
+          </view>
+          <view class="flex-cell">{{rat}}</view>
+          <view class="flex-cell" bindtap="rata">
+            <image class="counter-button" src="/images/add.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="flex-cell">
+        <view class="flex-row flex-cell">
+          <view class="flex-cell-text">
+            破解密码
+          </view>
+        </view>
+        <view class="flex-row flex-cell" bindtap="rapt">
+          <text class="password">{{rap}}</text>
+        </view>
+      </view>
+    </view>
   </view>
 
-  <view class="sample-r">
-    <text class="sample-text">hello world</text>
+  <view class="card card-b flex-column">
+    <view class="flex-row flex-cell">
+      <view class="flex-cell flex-column">
+        <view class="flex-row flex-cell">
+          <view class="flex-cell-text">
+            珠宝
+          </view>
+        </view>
+        <view class="flex-row flex-cell">
+          <view class="flex-cell" bindtap="bazm">
+            <image class="counter-button" src="/images/mines.png"></image>
+          </view>
+          <view class="flex-cell">{{baz}}</view>
+          <view class="flex-cell" bindtap="baza">
+            <image class="counter-button" src="/images/add.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="flex-cell">
+        <view class="flex-row flex-cell">
+          <view class="flex-cell-text">
+            符文
+          </view>
+        </view>
+        <view class="flex-row flex-cell">
+          <view class="flex-cell" bindtap="bafm">
+            <image class="counter-button" src="/images/mines.png"></image>
+          </view>
+          <view class="flex-cell">{{baf}}</view>
+          <view class="flex-cell" bindtap="bafa">
+            <image class="counter-button" src="/images/add.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="flex-row flex-cell">
+      <view class="flex-cell">
+        <view class="flex-row flex-cell">
+          <view class="flex-cell-text">
+            停靠
+          </view>
+        </view>
+        <view class="flex-row flex-cell">
+          <view class="flex-cell" bindtap="batm">
+            <image class="counter-button" src="/images/mines.png"></image>
+          </view>
+          <view class="flex-cell">{{bat}}</view>
+          <view class="flex-cell" bindtap="bata">
+            <image class="counter-button" src="/images/add.png"></image>
+          </view>
+        </view>
+      </view>
+      <view class="flex-cell">
+        <view class="flex-row flex-cell">
+          <view class="flex-cell-text">
+            破解密码
+          </view>
+        </view>
+        <view class="flex-row flex-cell" bindtap="bapt">
+          <text class="password">{{bap}}</text>
+        </view>
+      </view>
+    </view>
   </view>
 
-  <view class="sample-b">
-    <text class="sample-text">hello world</text>
-  </view>
-  
-  <view class="sample-r">
-    <text class="sample-text">hello world</text>
+
+  <view class="card card-r flex-column">
+    <view class="flex-row flex-cell">
+      <view class="flex-column flex-cell">
+        <view class="flex-row flex-cell">
+          <view class="flex-cell-text">
+            平衡
+          </view>
+        </view>
+        <view class="flex-row flex-cell">
+          <view class="flex-column flex-cell">
+            <view class="flex-row flex-cell" bindtap="rmpa">
+              <image class="counter-button" src="/images/add.png"></image>
+            </view>
+            <view class="flex-row flex-cell">{{rmp}}</view>
+            <view class="flex-row flex-cell" bindtap="rmpm">
+              <image class="counter-button" src="/images/mines.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="flex-column flex-cell">
+        <view class="flex-row flex-cell">
+          <view class="flex-cell-text">符文板1</view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+        </view>
+      </view>
+      <view class="flex-column flex-cell">
+        <view class="flex-row flex-cell">
+          <view class="flex-cell-text">符文板2</view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+        </view>
+      </view>
+    </view>
+    <view class="flex-row flex-cell">
+      <view class="flex-column">
+        <view class="flex-cell-text flex-cell">遗骸位置</view>
+        <view class="slider-container flex-cell">
+          <slider max="3" step="1" activeColor='#607d8b' bindchange="listenerSlider" />
+        </view>
+      </view>
+      <view class="flex-column">
+        <view class="flex-cell-text flex-cell">是否站立</view>
+        <view class="checkbox-container flex-cell">
+          <switch type="checkbox" bindchange="switch2Change" />
+        </view>
+      </view>
+    </view>
   </view>
 
-  <view class="sample-b">
-    <text class="sample-text">hello world</text>
+
+  <view class="card card-b flex-column">
+    <view class="flex-row flex-cell">
+      <view class="flex-column flex-cell">
+        <view class="flex-row flex-cell">
+          <view class="flex-cell-text">
+            平衡
+          </view>
+        </view>
+        <view class="flex-row flex-cell">
+          <view class="flex-column flex-cell">
+            <view class="flex-row flex-cell" bindtap="bmpa">
+              <image class="counter-button" src="/images/add.png"></image>
+            </view>
+            <view class="flex-row flex-cell">{{bmp}}</view>
+            <view class="flex-row flex-cell" bindtap="bmpm">
+              <image class="counter-button" src="/images/mines.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="flex-column flex-cell">
+        <view class="flex-row flex-cell">
+          <view class="flex-cell-text">符文板1</view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+        </view>
+      </view>
+      <view class="flex-column flex-cell">
+        <view class="flex-row flex-cell">
+          <view class="flex-cell-text">符文板2</view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw"></view>
+        </view>
+      </view>
+    </view>
+    <view class="flex-row flex-cell">
+      <view class="flex-column">
+        <view class="flex-cell-text flex-cell">遗骸位置</view>
+        <view class="slider-container flex-cell">
+          <slider max="3" step="1" activeColor='#607d8b' bindchange="listenerSlider" />
+        </view>
+      </view>
+      <view class="flex-column">
+        <view class="flex-cell-text flex-cell">是否站立</view>
+        <view class="checkbox-container flex-cell">
+          <switch type="checkbox" bindchange="switch2Change" />
+        </view>
+      </view>
+    </view>
   </view>
 
-  <view class="sample-r">
-    <text class="sample-text">hello world</text>
+  <view>
+    <view class="flex-row">
+      <view class="final-button flex-row flex-cell">
+        <view class="flex-cell final-button-image">
+          <image class="final-button-image" src="/images/save.png"></image>
+        </view>
+        <view class="flex-cell">
+          <text>保存</text>
+        </view>
+      </view>
+      <view class="final-button flex-row flex-cell" bindtap="clearAll">
+        <view class="flex-cell final-button-image">
+          <image class="final-button-image" src="/images/delete.png"></image>
+        </view>
+        <view class="flex-cell">
+          <text>清空</text>
+        </view>
+      </view>
+    </view>
   </view>
-
-  <view class="sample-b">
-    <text class="sample-text">hello world</text>
-  </view>
-
-  <view class="sample-r">
-    <text class="sample-text">hello world</text>
-  </view>
-
-  <view class="sample-b">
-    <text class="sample-text">hello world</text>
-  </view>
-
 </view>

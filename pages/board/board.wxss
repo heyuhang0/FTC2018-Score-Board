@@ -1,5 +1,6 @@
 .score-screen {
   position:fixed;
+  z-index:99998;/*置于顶层*/
   top:0px;
   padding: 50rpx;
   width: 750rpx;
@@ -8,26 +9,120 @@
   color: #fff;
   font-weight: 500;
   font-size: xx-large;
+  box-shadow: 2rpx 2rpx 14rpx 2rpx #333
 }
 
-.sample-r {
+.red-dot {
+  position: fixed;
+  z-index:99999;
+  top:-40rpx;
+  left:-40rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
   background-color: #ff5252;
-  color: #fff;
-  margin: 10rpx;
-  padding: 50rpx;
-  width: 610rpx;
-  text-align:center;
-  border-radius: 15rpx;
-  box-shadow: 1rpx 2rpx 5rpx 0rpx #ccc
+  box-shadow: 0rpx 5rpx 14rpx 3rpx #546e7a
 }
 
-.sample-b {
-  background-color: #448aff;
+.blue-dot {
+  position: fixed;
+  z-index:99999;
+  top:-40rpx;
+  right:-40rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background-color: #0091ea;
+  box-shadow: 0rpx 5rpx 14rpx 3rpx #546e7a
+}
+
+.card {
   color: #fff;
-  margin: 10rpx;
+  margin: 15rpx;
+  width: 600rpx;
   padding: 50rpx;
-  width: 610rpx;
   text-align:center;
   border-radius: 15rpx;
-  box-shadow: 1rpx 2rpx 5rpx 0rpx #ccc
+  box-shadow: 3rpx 5rpx 14rpx 3rpx #aaa
+}
+.card-r {
+  background-color: #ff5252;
+}
+
+.card-b {
+  background-color: #448aff;
+}
+
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-cell{
+  flex: 1;
+  padding: 5rpx;
+  /*border: 1px dotted greenyellow;*/
+}
+
+.flex-cell-fw{
+  flex: 1;
+  width:40rpx;
+  height:40rpx;
+  padding: 5rpx;
+  border: 1px solid white;
+}
+
+.flex-cell-text{
+  flex: 1;
+  font-style: oblique;
+  font-size: x-small;
+}
+
+.counter-button {
+  width: 20px;
+  height: 20px;
+}
+
+.final-position-button {
+  width: 32px;
+  height: 16px;
+}
+.password {
+  font-weight: 600;
+  font-size: large;
+}
+
+.slider-container {
+  width: 400rpx;
+  height: 80rpx;
+}
+
+.checkbox-container {
+  height: 80rpx;
+}
+
+.final-button {
+  color: #fff;
+  margin: 15rpx;
+  width: 290rpx;
+  padding: 20rpx;
+  text-align:left;
+  border-radius: 15rpx;
+  background-color:#8eacbb;
+  font-size: small;
+  box-shadow: 3rpx 5rpx 14rpx 3rpx #aaa;
+}
+
+.final-button-image {
+  width: 20px;
+  height: 20px;
+  text-align: center;
 }
