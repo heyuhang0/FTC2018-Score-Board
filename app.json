@@ -1,12 +1,36 @@
 {
   "pages":[
+    "pages/board/board",
     "pages/index/index",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#34515e",
+    "navigationBarTitleText": "FTC 计分器",
+    "navigationBarTextStyle":"light"
+  },
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/board/board",
+        "iconPath": "images/score-board.png",
+        "selectedIconPath": "images/score-board-b.png",
+        "text": "计分器"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/history.png",
+        "selectedIconPath": "images/history-b.png",
+        "text": "历史"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "iconPath": "images/help.png",
+        "selectedIconPath": "images/help-b.png",
+        "text": "规则"
+      }
+    ]
   }
 }

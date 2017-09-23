@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="score-screen">
+    <text class="screen-text">15 : 20</text>
+  </view>
+
+  <view class="sample-r">
+    <text class="sample-text">hello world</text>
+  </view>
+
+  <view class="sample-b">
+    <text class="sample-text">hello world</text>
+  </view>
+  
+  <view class="sample-r">
+    <text class="sample-text">hello world</text>
+  </view>
+
+  <view class="sample-b">
+    <text class="sample-text">hello world</text>
+  </view>
+
+  <view class="sample-r">
+    <text class="sample-text">hello world</text>
+  </view>
+
+  <view class="sample-b">
+    <text class="sample-text">hello world</text>
+  </view>
+
+  <view class="sample-r">
+    <text class="sample-text">hello world</text>
+  </view>
+
+  <view class="sample-b">
+    <text class="sample-text">hello world</text>
+  </view>
+
+</view>

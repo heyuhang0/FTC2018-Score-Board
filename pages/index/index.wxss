@@ -18,4 +18,8 @@
 
 .usermotto {
   margin-top: 200px;
+  padding: 50rpx;
+  background-color:#1296db;
+  border-radius: 15rpx;
+  box-shadow: 1rpx 2rpx 5rpx 0rpx #ccc
 }

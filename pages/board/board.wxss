@@ -1,0 +1,33 @@
+.score-screen {
+  position:fixed;
+  top:0px;
+  padding: 50rpx;
+  width: 750rpx;
+  background-color:#607d8b;
+  text-align:center;
+  color: #fff;
+  font-weight: 500;
+  font-size: xx-large;
+}
+
+.sample-r {
+  background-color: #ff5252;
+  color: #fff;
+  margin: 10rpx;
+  padding: 50rpx;
+  width: 610rpx;
+  text-align:center;
+  border-radius: 15rpx;
+  box-shadow: 1rpx 2rpx 5rpx 0rpx #ccc
+}
+
+.sample-b {
+  background-color: #448aff;
+  color: #fff;
+  margin: 10rpx;
+  padding: 50rpx;
+  width: 610rpx;
+  text-align:center;
+  border-radius: 15rpx;
+  box-shadow: 1rpx 2rpx 5rpx 0rpx #ccc
+}
