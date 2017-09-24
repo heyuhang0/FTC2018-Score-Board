@@ -1,3 +1,64 @@
+function timer(that, second, lastDate) {
+  if (stopTimer == true)
+    return;
+  if (second == pause) {
+    state = pause;
+    return;
+  } else if (state == pause && second != resume) {
+    resume = second;
+  } else if (second > 120) {
+    state = auto;
+  } else if (state == auto) {
+    state = autoManualPause;
+  } else if (second > 0) {
+    state = manual;
+  } else {
+    state = stop;
+  }
+
+  // 校准timer
+  var dateNow = new Date().getTime();
+  if (lastDate != null) {
+    second = second + 0.1 - (dateNow - lastDate) / 1000;
+  }
+  lastDate = dateNow;
+
+  var timerText = Math.floor(second / 60) + ":";
+  if (Math.round(second % 60) >= 10)
+    timerText += Math.round(second % 60);
+  else
+    timerText += "0" + Math.round(second % 60);
+  if (state == auto) {
+    timerText += " 自动阶段";
+  } else if (state == manual) {
+    timerText += " 手动阶段";
+  } else if (state == autoManualPause) {
+    timerText = "2:00 已暂停,轻触继续";
+  } else if (state == pause && second != pause) {
+    timerText += " 已暂停,轻触继续";
+  } else if (state == stop) {
+    timerText = " 已停止,轻触重新计时";
+  }
+  that.setData({
+    timer: timerText,
+  });
+
+  if (state == stop || state == autoManualPause || state == pause)
+    return;
+  var time = setTimeout(function () {
+    timer(that, second - 0.1, lastDate);
+  }, 100)
+}
+var stopTimer = true;
+var resume;
+var stop = 0;
+var auto = 1;
+var manual = 2;
+var pause = 842998483;
+var autoManualPause = 4;
+
+var state = stop;
+
 var az = 30; // az = auto zhubao 自动珠宝分数，其余同理
 var af = 15;
 var at = 10;
@@ -70,6 +131,7 @@ Page(
 
       rTip: "",
       bTip: "",
+      timer: "2:30 轻触开始计时",
       // 自动生成的控制符文板的垃圾代码
       rb100: 0,
       rb101: 0,
@@ -120,6 +182,17 @@ Page(
       bb231: 0,
       bb232: 0,
     },
+    timerButton: function() {
+      stopTimer = false;
+      if (state == stop)
+        timer(this, 150);
+      else if (state == autoManualPause)
+        timer(this, 119);
+      else if (state == pause)
+        timer(this, resume);
+      else
+        timer(this, pause);
+    },
     clearAll: function () {
       redTotalScore = 0;
       blueTotalScore = 0;
@@ -146,6 +219,12 @@ Page(
       rb2 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
       bb1 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
       bb2 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
+
+      stopTimer = true;
+      state = stop;
+      this.setData({
+        timer: "2:30 轻触开始计时",
+      });
 
       this.refresh();
     },

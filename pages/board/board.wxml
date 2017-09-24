@@ -1,8 +1,9 @@
 <view class="container">
 
-  <view class="score-screen">
+  <view class="score-screen" bindtap="timerButton">
     <text class="screen-text">{{redTotalScore}} : {{blueTotalScore}}</text>
   </view>
+  <view class="timer">{{timer}}</view>
   <view class="red-dot"></view>
   <view class="blue-dot"></view>
 
