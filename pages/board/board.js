@@ -11,7 +11,8 @@ var raz = 0; // raz = red auto zhubao 红方自动珠宝数,其余同理
 var raf = 0;
 var rat = 0;
 var rap = 0;
-var rapt;
+var rapt = "***|***";
+var raptt = "破解密码";
 var rmp = 0;
 var rmy = 0;
 var rmyt = "遗骸位置";
@@ -21,7 +22,8 @@ var baz = 0;
 var baf = 0;
 var bat = 0;
 var bap = 0;
-var bapt;
+var bapt = "***|***";
+var baptt = "破解密码";
 var bmp = 0;
 var bmy = 0;
 var bmyt = "遗骸位置";
@@ -33,6 +35,9 @@ var bb1 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
 var bb2 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
 var boardColor1 = "white";
 var boardColor2 = "grey";
+
+var rbsum = 0;
+var bbsum = 0;
 
 // pages/board/board.js
 Page(
@@ -46,6 +51,7 @@ Page(
       raf: 0,
       rat: 0,
       rap: "***|***",
+      raptt: "破解密码",
       rmp: 0,
       rmy: 0,
       rmyt: "遗骸位置",
@@ -56,11 +62,14 @@ Page(
       baf: 0,
       bat: 0,
       bap: "***|***",
+      baptt: "破解密码",
       bmp: 0,
       bmy: 0,
       bmyt: "遗骸位置",
       bmz: false,
 
+      rTip: "",
+      bTip: "",
       // 自动生成的控制符文板的垃圾代码
       rb100: 0,
       rb101: 0,
@@ -163,12 +172,18 @@ Page(
       if (rmz) {
         redTotalScore += 15;
       }
+      if (rap > 0) {
+        raptt = "破解了" + rap + "个密码";
+      } else {
+        raptt = "破解密码";
+      }
       this.setData({
         redTotalScore: redTotalScore,
         raz: raz,
         raf: raf,
         rat: rat,
         rap: rapt,
+        raptt: raptt,
         rmp: rmp,
         rmy: rmy,
         rmyt: rmyt,
@@ -197,18 +212,36 @@ Page(
       if (bmz) {
         blueTotalScore += 15;
       }
+      if (bap > 0) {
+        baptt = "破解了" + bap + "个密码";
+      } else {
+        baptt = "破解密码";
+      }
       this.setData({
         blueTotalScore: blueTotalScore,
         baz: baz,
         baf: baf,
         bat: bat,
         bap: bapt,
+        baptt: baptt,
         bmp: bmp,
         bmy: bmy,
         bmyt: bmyt,
         bmz: bmz,
       });
 
+      var rTip = "";
+      if (rbsum < raf) {
+        rTip = "(请填补自动程序的符文板,还剩" + (raf - rbsum) + "个)";
+      }
+      var bTip = "";
+      if (bbsum < baf) {
+        bTip = "(请填补自动程序的符文板,还剩" + (baf - bbsum) + "个)";
+      }
+      this.setData({
+        rTip: rTip,
+        bTip: bTip,
+      });
       this.refreshBoard();
     },
     //红色自动======================================================================================
@@ -430,6 +463,7 @@ Page(
             sum++;
         }
       }
+      rbsum = sum;
       if (sum > raf) { // 排除自动的得分
         score += (sum - raf) * 2;
       }
@@ -499,6 +533,7 @@ Page(
             sum++;
         }
       }
+      bbsum = sum;
       if (sum > raf) { // 排除自动的得分
         score += (sum - raf) * 2;
       }

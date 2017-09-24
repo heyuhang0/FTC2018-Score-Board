@@ -86,6 +86,22 @@
   font-size: x-small;
 }
 
+.flex-cell-board-name-cell-r{
+  flex: 1;
+  border-bottom: 1px dotted #bd4c4c;
+  height: 10rpx;
+}
+.flex-cell-board-name-cell-b{
+  flex: 1;
+  border-bottom: 1px dotted #466bad;
+  height: 10rpx;
+}
+.flex-cell-board-name{
+  position: relative;
+  top:-20rpx;
+  font-size: xx-small;
+}
+
 .counter-button {
   width: 20px;
   height: 20px;

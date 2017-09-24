@@ -7,6 +7,9 @@
   <view class="blue-dot"></view>
 
   <view class="card card-r flex-column">
+    <view class="flex-row flex-cell flex-cell-board-name-cell-r">
+      <text class="flex-cell-board-name">红方自动</text>
+    </view>
     <view class="flex-row flex-cell">
       <view class="flex-cell flex-column">
         <view class="flex-row flex-cell">
@@ -61,7 +64,7 @@
       <view class="flex-cell">
         <view class="flex-row flex-cell">
           <view class="flex-cell-text">
-            破解密码
+            {{raptt}}
           </view>
         </view>
         <view class="flex-row flex-cell" bindtap="rapt">
@@ -72,6 +75,9 @@
   </view>
 
   <view class="card card-b flex-column">
+    <view class="flex-row flex-cell flex-cell-board-name-cell-b">
+      <text class="flex-cell-board-name">蓝方自动</text>
+    </view>
     <view class="flex-row flex-cell">
       <view class="flex-cell flex-column">
         <view class="flex-row flex-cell">
@@ -126,7 +132,7 @@
       <view class="flex-cell">
         <view class="flex-row flex-cell">
           <view class="flex-cell-text">
-            破解密码
+            {{baptt}}
           </view>
         </view>
         <view class="flex-row flex-cell" bindtap="bapt">
@@ -138,6 +144,9 @@
 
 
   <view class="card card-r flex-column">
+    <view class="flex-row flex-cell flex-cell-board-name-cell-r">
+      <text class="flex-cell-board-name">红方手动{{rTip}}</text>
+    </view>
     <view class="flex-row flex-cell">
       <view class="flex-column flex-cell">
         <view class="flex-row flex-cell">
@@ -226,6 +235,9 @@
 
 
   <view class="card card-b flex-column">
+    <view class="flex-row flex-cell flex-cell-board-name-cell-b">
+      <text class="flex-cell-board-name">蓝方手动{{bTip}}</text>
+    </view>
     <view class="flex-row flex-cell">
       <view class="flex-column flex-cell">
         <view class="flex-row flex-cell">
