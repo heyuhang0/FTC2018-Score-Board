@@ -5,23 +5,32 @@
   margin: 15rpx;
   width: 600rpx;
   padding: 50rpx;
-  text-align:center;
+  text-align: center;
   border-radius: 15rpx;
-  box-shadow: 3rpx 5rpx 14rpx 3rpx #aaa
+  box-shadow: 3rpx 5rpx 14rpx 3rpx #aaa;
 }
-.flex-row{
+
+.flex-row {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.flex-column{
+
+.flex-column {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.flex-cell{
+.flex-cell {
   flex: 1;
   padding: 5rpx;
+}
+
+.about {
+  word-wrap: break-all;
+  word-break: normal;
+  width: 600rpx;
+  font-size: x-small;
 }
