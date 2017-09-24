@@ -210,15 +210,15 @@
     </view>
     <view class="flex-row flex-cell">
       <view class="flex-column">
-        <view class="flex-cell-text flex-cell">遗骸位置</view>
+        <view class="flex-cell-text flex-cell">{{rmyt}}</view>
         <view class="slider-container flex-cell">
-          <slider max="3" step="1" activeColor='#607d8b' bindchange="listenerSlider" />
+          <slider max="3" step="1" activeColor='#607d8b' value="{{rmy}} "bindchange="relicPositionChangeR" />
         </view>
       </view>
       <view class="flex-column">
         <view class="flex-cell-text flex-cell">是否站立</view>
         <view class="checkbox-container flex-cell">
-          <switch type="checkbox" bindchange="switch2Change" />
+          <switch type="checkbox" checked="{{rmz}}" bindchange="relicStandR" />
         </view>
       </view>
     </view>
@@ -298,15 +298,15 @@
     </view>
     <view class="flex-row flex-cell">
       <view class="flex-column">
-        <view class="flex-cell-text flex-cell">遗骸位置</view>
+        <view class="flex-cell-text flex-cell">{{bmyt}}</view>
         <view class="slider-container flex-cell">
-          <slider max="3" step="1" activeColor='#607d8b' bindchange="listenerSlider" />
+          <slider max="3" step="1" activeColor='#607d8b' value="{{bmy}} "bindchange="relicPositionChangeB" />
         </view>
       </view>
       <view class="flex-column">
         <view class="flex-cell-text flex-cell">是否站立</view>
         <view class="checkbox-container flex-cell">
-          <switch type="checkbox" bindchange="switch2Change" />
+          <switch type="checkbox" checked="{{bmz}}" bindchange="relicStandB" />
         </view>
       </view>
     </view>

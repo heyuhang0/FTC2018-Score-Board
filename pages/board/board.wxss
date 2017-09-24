@@ -46,11 +46,11 @@
   box-shadow: 3rpx 5rpx 14rpx 3rpx #aaa
 }
 .card-r {
-  background-color: #ff5252;
+  background-color: #e55c5c;
 }
 
 .card-b {
-  background-color: #448aff;
+  background-color: #5c8ee5;
 }
 
 
