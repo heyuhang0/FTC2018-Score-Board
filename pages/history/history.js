@@ -5,14 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    results: [],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
   },
 
   /**
@@ -26,7 +25,18 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    this.setData({
+      results: (wx.getStorageSync('results') || []).map(result => {
+        var color;
+        if (result[0] > result[1])
+          color = "#e55c5c";
+        else if (result[0] < result[1])
+          color = "#5c8ee5";
+        else
+          color = "#607d8b";
+        return ({message : result[0] + " : " + result[1], color: color});
+      }),
+    })
   },
 
   /**

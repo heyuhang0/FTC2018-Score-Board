@@ -1,2 +1,9 @@
 <!--pages/history/history.wxml-->
-<text>pages/history/history.wxml</text>
+<view class="container log-list">
+  <block wx:for="{{results}}" wx:for-item="result" wx:key="property" >
+    <view class="card"  style="background-color: {{result.color}}">
+      <text class="result-item">{{result.message}}</text>
+    </view>
+  </block>
+</view>
+

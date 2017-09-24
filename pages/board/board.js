@@ -149,6 +149,15 @@ Page(
 
       this.refresh();
     },
+    saveData: function() {
+      var results = wx.getStorageSync('results') || []
+      results.unshift([redTotalScore, blueTotalScore]);
+      wx.setStorageSync('results', results)
+      wx.showToast({
+        title: '已保存比分',
+        icon: 'success'
+      });
+    },
     refresh: function () {
       redTotalScore = az * raz + af * raf + at * rat + ap * rap + mp * rmp;
       redTotalScore += this.computeBoardScoreRed();

@@ -326,7 +326,7 @@
 
   <view>
     <view class="flex-row">
-      <view class="final-button flex-row flex-cell">
+      <view class="final-button flex-row flex-cell" bindtap="saveData">
         <view class="flex-cell final-button-image">
           <image class="final-button-image" src="/images/save.png"></image>
         </view>
