@@ -1,14 +1,16 @@
 {
-  "pages":[
+  "pages": [
     "pages/board/board",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/rules/rules",
+    "pages/history/history"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#34515e",
     "navigationBarTitleText": "FTC 计分器",
-    "navigationBarTextStyle":"light"
+    "navigationBarTextStyle": "light"
   },
   "tabBar": {
     "selectedColor": "#1296db",
@@ -20,13 +22,13 @@
         "text": "计分器"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/history/history",
         "iconPath": "images/history.png",
         "selectedIconPath": "images/history-b.png",
         "text": "历史"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/rules/rules",
         "iconPath": "images/help.png",
         "selectedIconPath": "images/help-b.png",
         "text": "规则"

@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="card flex-column">
+    <view class="flex-cell">
+      <text>密码表</text>
+    </view>
+    <view class="flex-cell flex-row">
+      <image class="flex-cell" mode="scaleToFill" src="/images/password.jpg"/>
+    </view>
+  </view>
+  <view class="card flex-column">
+    <view class="flex-cell">
+      <text>得分表</text>
+    </view>
+    <view class="flex-cell flex-row">
+      <image class="flex-cell" mode="scaleToFill" src="/images/score-rules.png"/>
+    </view>
+  </view>
+</view>

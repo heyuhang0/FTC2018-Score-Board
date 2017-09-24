@@ -1,0 +1,27 @@
+.card {
+  position: relative;
+  top: -130rpx;
+  color: black;
+  margin: 15rpx;
+  width: 600rpx;
+  padding: 50rpx;
+  text-align:center;
+  border-radius: 15rpx;
+  box-shadow: 3rpx 5rpx 14rpx 3rpx #aaa
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-cell{
+  flex: 1;
+  padding: 5rpx;
+}
