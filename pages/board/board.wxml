@@ -162,24 +162,24 @@
           <view class="flex-cell-text">符文板1</view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb100}};" bindtap="rb100"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb101}};" bindtap="rb101"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb102}};" bindtap="rb102"></view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb110}};" bindtap="rb110"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb111}};" bindtap="rb111"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb112}};" bindtap="rb112"></view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb120}};" bindtap="rb120"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb121}};" bindtap="rb121"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb122}};" bindtap="rb122"></view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb130}};" bindtap="rb130"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb131}};" bindtap="rb131"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb132}};" bindtap="rb132"></view>
         </view>
       </view>
       <view class="flex-column flex-cell">
@@ -187,24 +187,24 @@
           <view class="flex-cell-text">符文板2</view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb200}};" bindtap="rb200"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb201}};" bindtap="rb201"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb202}};" bindtap="rb202"></view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb210}};" bindtap="rb210"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb211}};" bindtap="rb211"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb212}};" bindtap="rb212"></view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb220}};" bindtap="rb220"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb221}};" bindtap="rb221"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb222}};" bindtap="rb222"></view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb230}};" bindtap="rb230"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb231}};" bindtap="rb231"></view>
+          <view class="flex-cell-fw" style="background-color: {{rb232}};" bindtap="rb232"></view>
         </view>
       </view>
     </view>
@@ -250,24 +250,24 @@
           <view class="flex-cell-text">符文板1</view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb100}};" bindtap="bb100"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb101}};" bindtap="bb101"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb102}};" bindtap="bb102"></view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb110}};" bindtap="bb110"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb111}};" bindtap="bb111"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb112}};" bindtap="bb112"></view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb120}};" bindtap="bb120"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb121}};" bindtap="bb121"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb122}};" bindtap="bb122"></view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb130}};" bindtap="bb130"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb131}};" bindtap="bb131"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb132}};" bindtap="bb132"></view>
         </view>
       </view>
       <view class="flex-column flex-cell">
@@ -275,24 +275,24 @@
           <view class="flex-cell-text">符文板2</view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb200}};" bindtap="bb200"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb201}};" bindtap="bb201"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb202}};" bindtap="bb202"></view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb210}};" bindtap="bb210"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb211}};" bindtap="bb211"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb212}};" bindtap="bb212"></view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb220}};" bindtap="bb220"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb221}};" bindtap="bb221"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb222}};" bindtap="bb222"></view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
-          <view class="flex-cell-fw"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb230}};" bindtap="bb230"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb231}};" bindtap="bb231"></view>
+          <view class="flex-cell-fw" style="background-color: {{bb232}};" bindtap="bb232"></view>
         </view>
       </view>
     </view>

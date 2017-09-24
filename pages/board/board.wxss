@@ -74,8 +74,8 @@
 
 .flex-cell-fw{
   flex: 1;
-  width:40rpx;
-  height:40rpx;
+  width:70rpx;
+  height:70rpx;
   padding: 5rpx;
   border: 1px solid white;
 }
