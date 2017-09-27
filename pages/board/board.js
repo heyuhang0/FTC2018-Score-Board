@@ -1,3 +1,4 @@
+// 计时器相关
 function timer(that, second, lastDate) {
   if (stopTimer == true)
     return;
@@ -59,11 +60,14 @@ var autoManualPause = 4;
 
 var state = stop;
 
+// 全局变量
 var az = 30; // az = auto zhubao 自动珠宝分数，其余同理
 var af = 15;
 var at = 10;
 var ap = 30;
 var mp = 20;
+var mMajorP = 40;
+var mMinorP = 10;
 
 var redTotalScore = 0;
 var blueTotalScore = 0;
@@ -81,6 +85,13 @@ var rmyt = "遗骸1位置";
 var rmyt2 = "遗骸2位置"
 var rmz = false;
 var rmz2 = false;
+var rmf = 0;
+var rmr = 0;
+var rmc = 0;
+var rmWholeBoard = 0;
+var rmMajorP = 0;
+var rmMinorP = 0;
+var rAutoCompute = true;
 
 var baz = 0;
 var baf = 0;
@@ -95,6 +106,13 @@ var bmyt = "遗骸1位置";
 var bmyt2 = "遗骸2位置"
 var bmz = false;
 var bmz2 = false;
+var bmf = 0;
+var bmr = 0;
+var bmc = 0;
+var bmWholeBoard = 0;
+var bmMajorP = 0;
+var bmMinorP = 0;
+var bAutoCompute = true;
 
 var rb1 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
 var rb2 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
@@ -126,6 +144,13 @@ Page(
       rmyt2: "遗骸2位置",
       rmz: false,
       rmz2: false,
+      rmf: rmf,
+      rmr: rmr,
+      rmc: rmc,
+      rmWholeBoard: rmWholeBoard,
+      rmMajorP: rmMajorP,
+      rmMinorP: rmMinorP,
+      rAutoCompute: rAutoCompute,
 
       blueTotalScore: 0,
       baz: 0,
@@ -140,6 +165,13 @@ Page(
       bmyt2: "遗骸2位置",
       bmz: false,
       bmz2: false,
+      bmf: bmf,
+      bmr: bmr,
+      bmc: bmc,
+      bmWholeBoard: bmWholeBoard,
+      bmMajorP: bmMajorP,
+      bmMinorP: bmMinorP,
+      bAutoCompute: bAutoCompute,
 
       rTip: "",
       bTip: "",
@@ -219,6 +251,13 @@ Page(
       rmy2 = 0;
       rmz = false;
       rmz2 = false;
+      rmf = 0;
+      rmr = 0;
+      rmc = 0;
+      rmWholeBoard = 0;
+      rmMajorP = 0;
+      rmMinorP = 0;
+      rAutoCompute = true;
 
       baz = 0;
       baf = 0;
@@ -230,6 +269,13 @@ Page(
       bmy2 = 0;
       bmz = false;
       bmz2 = false;
+      bmf = 0;
+      bmr = 0;
+      bmc = 0;
+      bmWholeBoard = 0;
+      bmMajorP = 0;
+      bmMinorP = 0;
+      bAutoCompute = true;
 
       rb1 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
       rb2 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
@@ -254,7 +300,7 @@ Page(
       });
     },
     refresh: function () {
-      redTotalScore = az * raz + af * raf + at * rat + ap * rap + mp * rmp;
+      redTotalScore = az * raz + af * raf + at * rat + ap * rap + mp * rmp + mMajorP * bmMajorP + mMinorP * bmMinorP;
       redTotalScore += this.computeBoardScoreRed();
       switch (rmy) {
         case 0:
@@ -315,9 +361,16 @@ Page(
         rmyt2: rmyt2,
         rmz: rmz,
         rmz2: rmz2,
+        rmf: rmf,
+        rmr: rmr,
+        rmc: rmc,
+        rmWholeBoard: rmWholeBoard,
+        rmMajorP: rmMajorP,
+        rmMinorP: rmMinorP,
+        rAutoCompute: rAutoCompute,
       });
 
-      blueTotalScore = az * baz + af * baf + at * bat + ap * bap + mp * bmp;
+      blueTotalScore = az * baz + af * baf + at * bat + ap * bap + mp * bmp + mMajorP * rmMajorP + mMinorP * rmMinorP;
       blueTotalScore += this.computeBoardScoreBlue();
       switch (bmy) {
         case 0:
@@ -378,6 +431,13 @@ Page(
         bmyt2: bmyt2,
         bmz: bmz,
         bmz2: bmz2,
+        bmf: bmf,
+        bmr: bmr,
+        bmc: bmc,
+        bmWholeBoard: bmWholeBoard,
+        bmMajorP: bmMajorP,
+        bmMinorP: bmMinorP,
+        bAutoCompute: bAutoCompute,
       });
 
       var rTip = "";
@@ -452,6 +512,24 @@ Page(
     rmpm: function () {
       if (rmp > 0)
         rmp--;
+      this.refresh();
+    },
+    rmMajorPa: function () {
+        rmMajorP++;
+      this.refresh();
+    },
+    rmMajorPm: function () {
+      if (rmMajorP > 0)
+        rmMajorP--;
+      this.refresh();
+    },
+    rmMinorPa: function () {
+      rmMinorP++;
+      this.refresh();
+    },
+    rmMinorPm: function () {
+      if (rmMinorP > 0)
+        rmMinorP--;
       this.refresh();
     },
     relicPositionChangeR: function (e) {
@@ -534,6 +612,24 @@ Page(
     bmpm: function () {
       if (bmp > 0)
         bmp--;
+      this.refresh();
+    },
+    bmMajorPa: function () {
+      bmMajorP++;
+      this.refresh();
+    },
+    bmMajorPm: function () {
+      if (bmMajorP > 0)
+        bmMajorP--;
+      this.refresh();
+    },
+    bmMinorPa: function () {
+      bmMinorP++;
+      this.refresh();
+    },
+    bmMinorPm: function () {
+      if (bmMinorP > 0)
+        bmMinorP--;
       this.refresh();
     },
     relicPositionChangeB: function (e) {
