@@ -12,3 +12,7 @@
   font-weight: 500;
   font-size: x-large;
 }
+
+.tip {
+  font-size: small;
+}
