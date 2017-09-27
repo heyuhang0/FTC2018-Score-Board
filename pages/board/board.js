@@ -76,8 +76,11 @@ var rapt = "***|***";
 var raptt = "破解密码";
 var rmp = 0;
 var rmy = 0;
-var rmyt = "遗骸位置";
+var rmy2 = 0;
+var rmyt = "遗骸1位置";
+var rmyt2 = "遗骸2位置"
 var rmz = false;
+var rmz2 = false;
 
 var baz = 0;
 var baf = 0;
@@ -87,8 +90,11 @@ var bapt = "***|***";
 var baptt = "破解密码";
 var bmp = 0;
 var bmy = 0;
-var bmyt = "遗骸位置";
+var bmy2 = 0;
+var bmyt = "遗骸1位置";
+var bmyt2 = "遗骸2位置"
 var bmz = false;
+var bmz2 = false;
 
 var rb1 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
 var rb2 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
@@ -115,8 +121,11 @@ Page(
       raptt: "破解密码",
       rmp: 0,
       rmy: 0,
-      rmyt: "遗骸位置",
+      rmy2: 0,
+      rmyt: "遗骸1位置",
+      rmyt2: "遗骸2位置",
       rmz: false,
+      rmz2: false,
 
       blueTotalScore: 0,
       baz: 0,
@@ -126,8 +135,11 @@ Page(
       baptt: "破解密码",
       bmp: 0,
       bmy: 0,
-      bmyt: "遗骸位置",
+      bmy2: 0,
+      bmyt: "遗骸1位置",
+      bmyt2: "遗骸2位置",
       bmz: false,
+      bmz2: false,
 
       rTip: "",
       bTip: "",
@@ -204,7 +216,9 @@ Page(
       rapt = "***|***";
       rmp = 0;
       rmy = 0;
+      rmy2 = 0;
       rmz = false;
+      rmz2 = false;
 
       baz = 0;
       baf = 0;
@@ -213,7 +227,9 @@ Page(
       bapt = "***|***";
       bmp = 0;
       bmy = 0;
+      bmy2 = 0;
       bmz = false;
+      bmz2 = false;
 
       rb1 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
       rb2 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
@@ -242,22 +258,42 @@ Page(
       redTotalScore += this.computeBoardScoreRed();
       switch (rmy) {
         case 0:
-          rmyt = "遗骸位置"
+          rmyt = "遗骸1位置"
           break;
         case 1:
           redTotalScore += 10;
-          rmyt = "遗骸在1区"
+          rmyt = "遗骸1在1区"
           break;
         case 2:
           redTotalScore += 20;
-          rmyt = "遗骸在2区"
+          rmyt = "遗骸1在2区"
           break;
         case 3:
           redTotalScore += 40;
-          rmyt = "遗骸在3区"
+          rmyt = "遗骸1在3区"
+          break;
+      }
+      switch (rmy2) {
+        case 0:
+          rmyt2 = "遗骸2位置"
+          break;
+        case 1:
+          redTotalScore += 10;
+          rmyt2 = "遗骸2在1区"
+          break;
+        case 2:
+          redTotalScore += 20;
+          rmyt2 = "遗骸2在2区"
+          break;
+        case 3:
+          redTotalScore += 40;
+          rmyt2 = "遗骸2在3区"
           break;
       }
       if (rmz) {
+        redTotalScore += 15;
+      }
+      if (rmz2) {
         redTotalScore += 15;
       }
       if (rap > 0) {
@@ -274,30 +310,53 @@ Page(
         raptt: raptt,
         rmp: rmp,
         rmy: rmy,
+        rmy2: rmy2,
         rmyt: rmyt,
+        rmyt2: rmyt2,
         rmz: rmz,
+        rmz2: rmz2,
       });
 
       blueTotalScore = az * baz + af * baf + at * bat + ap * bap + mp * bmp;
       blueTotalScore += this.computeBoardScoreBlue();
       switch (bmy) {
         case 0:
-          bmyt = "遗骸位置";
+          bmyt = "遗骸1位置";
           break;
         case 1:
           blueTotalScore += 10;
-          bmyt = "遗骸在1区";
+          bmyt = "遗骸1在1区";
           break;
         case 2:
           blueTotalScore += 20;
-          bmyt = "遗骸在2区";
+          bmyt = "遗骸1在2区";
           break;
         case 3:
           blueTotalScore += 40;
-          bmyt = "遗骸在3区";
+          bmyt = "遗骸1在3区";
+          break;
+      }
+      switch (bmy2) {
+        case 0:
+          bmyt2 = "遗骸2位置";
+          break;
+        case 1:
+          blueTotalScore += 10;
+          bmyt2 = "遗骸2在1区";
+          break;
+        case 2:
+          blueTotalScore += 20;
+          bmyt2 = "遗骸2在2区";
+          break;
+        case 3:
+          blueTotalScore += 40;
+          bmyt2 = "遗骸2在3区";
           break;
       }
       if (bmz) {
+        blueTotalScore += 15;
+      }
+      if (bmz2) {
         blueTotalScore += 15;
       }
       if (bap > 0) {
@@ -314,8 +373,11 @@ Page(
         baptt: baptt,
         bmp: bmp,
         bmy: bmy,
+        bmy2: bmy2,
         bmyt: bmyt,
+        bmyt2: bmyt2,
         bmz: bmz,
+        bmz2: bmz2,
       });
 
       var rTip = "";
@@ -398,9 +460,20 @@ Page(
         rmz = false;
       this.refresh();
     },
+    relicPositionChangeR2: function (e) {
+      rmy2 = e.detail.value;
+      if (rmy2 == 0)
+        rmz2 = false;
+      this.refresh();
+    },
     relicStandR: function (e) {
       if (rmy > 0)
         rmz = e.detail.value;
+      this.refresh();
+    },
+    relicStandR2: function (e) {
+      if (rmy2 > 0)
+        rmz2 = e.detail.value;
       this.refresh();
     },
     //蓝色自动======================================================================================
@@ -472,6 +545,17 @@ Page(
     relicStandB: function (e) {
       if (bmy > 0)
         bmz = e.detail.value;
+      this.refresh();
+    },
+    relicPositionChangeB2: function (e) {
+      bmy2 = e.detail.value;
+      if (bmy2 == 0)
+        bmz2 = false;
+      this.refresh();
+    },
+    relicStandB2: function (e) {
+      if (bmy2 > 0)
+        bmz2 = e.detail.value;
       this.refresh();
     },
     //符文板======================================================================================

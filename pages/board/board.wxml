@@ -301,15 +301,15 @@
         </view>
         <view class="flex-row flex-cell">
           <view class="flex-column">
-            <view class="flex-cell-text flex-cell">遗骸2位置</view>
+            <view class="flex-cell-text flex-cell">{{rmyt2}}</view>
             <view class="slider-container flex-cell">
-              <slider max="3" step="1" activeColor='#607d8b' value="" bindchange="" />
+              <slider max="3" step="1" activeColor='#607d8b' value="{{rmy2}}" bindchange="relicPositionChangeR2" />
             </view>
           </view>
           <view class="flex-column">
             <view class="flex-cell-text flex-cell">站立?</view>
             <view class="checkbox-container flex-cell">
-              <switch type="checkbox" checked="" bindchange="" />
+              <switch type="checkbox" checked="{{rmz2}}" bindchange="relicStandR2" />
             </view>
           </view>
         </view>
@@ -334,7 +334,7 @@
               <image class="counter-button" src="/images/add.png"></image>
             </view>
             <view class="flex-row flex-cell">{{bmp}}</view>
-            <view class="flex-row flex-cell" bindtap="rmpm">
+            <view class="flex-row flex-cell" bindtap="bmpm">
               <image class="counter-button" src="/images/mines.png"></image>
             </view>
           </view>
@@ -357,15 +357,15 @@
         </view>
         <view class="flex-row flex-cell">
           <view class="flex-column">
-            <view class="flex-cell-text flex-cell">遗骸2位置</view>
+            <view class="flex-cell-text flex-cell">{{bmyt2}}</view>
             <view class="slider-container flex-cell">
-              <slider max="3" step="1" activeColor='#607d8b' value="" bindchange="" />
+              <slider max="3" step="1" activeColor='#607d8b' value="{{bmy2}}" bindchange="relicPositionChangeB2" />
             </view>
           </view>
           <view class="flex-column">
             <view class="flex-cell-text flex-cell">站立?</view>
             <view class="checkbox-container flex-cell">
-              <switch type="checkbox" checked="" bindchange="" />
+              <switch type="checkbox" checked="{{bmz2}}" bindchange="relicStandB2" />
             </view>
           </view>
         </view>
