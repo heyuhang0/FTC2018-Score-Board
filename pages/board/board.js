@@ -226,7 +226,7 @@ Page(
       bb231: 0,
       bb232: 0,
     },
-    timerButton: function() {
+    timerButton: function () {
       stopTimer = false;
       if (state == stop)
         timer(this, 150);
@@ -290,7 +290,7 @@ Page(
 
       this.refresh();
     },
-    saveData: function() {
+    saveData: function () {
       var results = wx.getStorageSync('results') || []
       results.unshift([redTotalScore, blueTotalScore]);
       wx.setStorageSync('results', results)
@@ -515,7 +515,7 @@ Page(
       this.refresh();
     },
     rmMajorPa: function () {
-        rmMajorP++;
+      rmMajorP++;
       this.refresh();
     },
     rmMajorPm: function () {
@@ -733,18 +733,24 @@ Page(
       }
       rbsum = sum;
       if (sum > raf) { // 排除自动的得分
+        rmf = sum;
         score += (sum - raf) * 2;
+      } else {
+        rmf = raf;
       }
       //统计行得分
       b = rb1;
+      rmr = 0;
       for (var row in b) {
         var isFull = true;
         for (var column in b[0]) {
           if (b[row][column] == 0)
             isFull = false;
         }
-        if (isFull)
+        if (isFull) {
           score += 10;
+          rmr ++;
+        }
       }
       b = rb2;
       for (var row in b) {
@@ -753,19 +759,24 @@ Page(
           if (b[row][column] == 0)
             isFull = false;
         }
-        if (isFull)
+        if (isFull) {
           score += 10;
+          rmr ++;
+        }
       }
       // 统计列得分
       b = rb1;
+      rmc = 0;
       for (var column in b[0]) {
         var isFull = true;
         for (var row in b) {
           if (b[row][column] == 0)
             isFull = false;
         }
-        if (isFull)
+        if (isFull) {
           score += 20;
+          rmc ++;
+        }
       }
       b = rb2;
       for (var column in b[0]) {
@@ -774,13 +785,20 @@ Page(
           if (b[row][column] == 0)
             isFull = false;
         }
-        if (isFull)
+        if (isFull) {
+          rmc++;
           score += 20;
+        }
       }
-      if (this.ifCompletedCipher(rb1))
+      rmWholeBoard = 0;
+      if (this.ifCompletedCipher(rb1)) {
         score += 30;
-      if (this.ifCompletedCipher(rb2))
+        rmWholeBoard ++;
+      }
+      if (this.ifCompletedCipher(rb2)) {
         score += 30;
+        rmWholeBoard ++;
+      }
       return score;
     },
     computeBoardScoreBlue: function () {
@@ -802,19 +820,25 @@ Page(
         }
       }
       bbsum = sum;
-      if (sum > raf) { // 排除自动的得分
-        score += (sum - raf) * 2;
+      if (sum > baf) { // 排除自动的得分
+        score += (sum - baf) * 2;
+        bmf = sum;
+      } else {
+        bmf = baf;
       }
       //统计行得分
       b = bb1;
+      bmr = 0;
       for (var row in b) {
         var isFull = true;
         for (var column in b[0]) {
           if (b[row][column] == 0)
             isFull = false;
         }
-        if (isFull)
+        if (isFull) {
           score += 10;
+          bmr ++;
+        }
       }
       b = bb2;
       for (var row in b) {
@@ -823,19 +847,24 @@ Page(
           if (b[row][column] == 0)
             isFull = false;
         }
-        if (isFull)
+        if (isFull) {
           score += 10;
+          bmr ++;
+        }
       }
       // 统计列得分
       b = bb1;
+      bmc = 0;
       for (var column in b[0]) {
         var isFull = true;
         for (var row in b) {
           if (b[row][column] == 0)
             isFull = false;
         }
-        if (isFull)
+        if (isFull) {
           score += 20;
+          bmc ++;
+        }
       }
       b = bb2;
       for (var column in b[0]) {
@@ -844,13 +873,20 @@ Page(
           if (b[row][column] == 0)
             isFull = false;
         }
-        if (isFull)
+        if (isFull) {
           score += 20;
+          bmc ++;
+        }
       }
-      if (this.ifCompletedCipher(bb1))
+      bmWholeBoard = 0;
+      if (this.ifCompletedCipher(bb1)) {
         score += 30;
-      if (this.ifCompletedCipher(bb2))
+        bmWholeBoard ++;
+      }
+      if (this.ifCompletedCipher(bb2)) {
         score += 30;
+        bmWholeBoard ++;
+      }
       return score;
     },
     //垃圾代码警告!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
