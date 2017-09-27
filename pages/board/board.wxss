@@ -126,7 +126,7 @@
 }
 
 .slider-container {
-  width: 400rpx;
+  width: 370rpx;
   height: 80rpx;
 }
 

@@ -151,24 +151,6 @@
     <view class="flex-row flex-cell">
       <view class="flex-column flex-cell">
         <view class="flex-row flex-cell">
-          <view class="flex-cell-text">
-            平衡
-          </view>
-        </view>
-        <view class="flex-row flex-cell">
-          <view class="flex-column flex-cell">
-            <view class="flex-row flex-cell" bindtap="rmpa">
-              <image class="counter-button" src="/images/add.png"></image>
-            </view>
-            <view class="flex-row flex-cell">{{rmp}}</view>
-            <view class="flex-row flex-cell" bindtap="rmpm">
-              <image class="counter-button" src="/images/mines.png"></image>
-            </view>
-          </view>
-        </view>
-      </view>
-      <view class="flex-column flex-cell">
-        <view class="flex-row flex-cell">
           <view class="flex-cell-text">符文板1</view>
         </view>
         <view class="flex-row">
@@ -218,20 +200,6 @@
         </view>
       </view>
     </view>
-    <view class="flex-row flex-cell">
-      <view class="flex-column">
-        <view class="flex-cell-text flex-cell">{{rmyt}}</view>
-        <view class="slider-container flex-cell">
-          <slider max="3" step="1" activeColor='#607d8b' value="{{rmy}} "bindchange="relicPositionChangeR" />
-        </view>
-      </view>
-      <view class="flex-column">
-        <view class="flex-cell-text flex-cell">是否站立</view>
-        <view class="checkbox-container flex-cell">
-          <switch type="checkbox" checked="{{rmz}}" bindchange="relicStandR" />
-        </view>
-      </view>
-    </view>
   </view>
 
 
@@ -240,24 +208,6 @@
       <text class="flex-cell-board-name">蓝方手动{{bTip}}</text>
     </view>
     <view class="flex-row flex-cell">
-      <view class="flex-column flex-cell">
-        <view class="flex-row flex-cell">
-          <view class="flex-cell-text">
-            平衡
-          </view>
-        </view>
-        <view class="flex-row flex-cell">
-          <view class="flex-column flex-cell">
-            <view class="flex-row flex-cell" bindtap="bmpa">
-              <image class="counter-button" src="/images/add.png"></image>
-            </view>
-            <view class="flex-row flex-cell">{{bmp}}</view>
-            <view class="flex-row flex-cell" bindtap="bmpm">
-              <image class="counter-button" src="/images/mines.png"></image>
-            </view>
-          </view>
-        </view>
-      </view>
       <view class="flex-column flex-cell">
         <view class="flex-row flex-cell">
           <view class="flex-cell-text">符文板1</view>
@@ -309,17 +259,115 @@
         </view>
       </view>
     </view>
+  </view>
+
+  <view class="card card-r flex-column">
+    <view class="flex-row flex-cell flex-cell-board-name-cell-r">
+      <text class="flex-cell-board-name">红方结束阶段</text>
+    </view>
     <view class="flex-row flex-cell">
-      <view class="flex-column">
-        <view class="flex-cell-text flex-cell">{{bmyt}}</view>
-        <view class="slider-container flex-cell">
-          <slider max="3" step="1" activeColor='#607d8b' value="{{bmy}} "bindchange="relicPositionChangeB" />
+      <view class="flex-column flex-cell">
+        <view class="flex-row flex-cell">
+          <view class="flex-cell-text">
+            平衡
+          </view>
+        </view>
+        <view class="flex-row flex-cell">
+          <view class="flex-column flex-cell">
+            <view class="flex-row flex-cell" bindtap="rmpa">
+              <image class="counter-button" src="/images/add.png"></image>
+            </view>
+            <view class="flex-row flex-cell">{{rmp}}</view>
+            <view class="flex-row flex-cell" bindtap="rmpm">
+              <image class="counter-button" src="/images/mines.png"></image>
+            </view>
+          </view>
         </view>
       </view>
-      <view class="flex-column">
-        <view class="flex-cell-text flex-cell">是否站立</view>
-        <view class="checkbox-container flex-cell">
-          <switch type="checkbox" checked="{{bmz}}" bindchange="relicStandB" />
+      <view class="flex-column flex-cell">
+        <view class="flex-row flex-cell">
+          <view class="flex-column">
+            <view class="flex-cell-text flex-cell">{{rmyt}}</view>
+            <view class="slider-container flex-cell">
+              <slider max="3" step="1" activeColor='#607d8b' value="{{rmy}} " bindchange="relicPositionChangeR" />
+            </view>
+          </view>
+          <view class="flex-column">
+            <view class="flex-cell-text flex-cell">站立?</view>
+            <view class="checkbox-container flex-cell">
+              <switch type="checkbox" checked="{{rmz}}" bindchange="relicStandR" />
+            </view>
+          </view>
+        </view>
+        <view class="flex-row flex-cell">
+          <view class="flex-column">
+            <view class="flex-cell-text flex-cell">遗骸2位置</view>
+            <view class="slider-container flex-cell">
+              <slider max="3" step="1" activeColor='#607d8b' value="" bindchange="" />
+            </view>
+          </view>
+          <view class="flex-column">
+            <view class="flex-cell-text flex-cell">站立?</view>
+            <view class="checkbox-container flex-cell">
+              <switch type="checkbox" checked="" bindchange="" />
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="card card-b flex-column">
+    <view class="flex-row flex-cell flex-cell-board-name-cell-b">
+      <text class="flex-cell-board-name">蓝方结束阶段</text>
+    </view>
+    <view class="flex-row flex-cell">
+      <view class="flex-column flex-cell">
+        <view class="flex-row flex-cell">
+          <view class="flex-cell-text">
+            平衡
+          </view>
+        </view>
+        <view class="flex-row flex-cell">
+          <view class="flex-column flex-cell">
+            <view class="flex-row flex-cell" bindtap="bmpa">
+              <image class="counter-button" src="/images/add.png"></image>
+            </view>
+            <view class="flex-row flex-cell">{{bmp}}</view>
+            <view class="flex-row flex-cell" bindtap="rmpm">
+              <image class="counter-button" src="/images/mines.png"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="flex-column flex-cell">
+        <view class="flex-row flex-cell">
+          <view class="flex-column">
+            <view class="flex-cell-text flex-cell">{{bmyt}}</view>
+            <view class="slider-container flex-cell">
+              <slider max="3" step="1" activeColor='#607d8b' value="{{bmy}} " bindchange="relicPositionChangeB" />
+            </view>
+          </view>
+          <view class="flex-column">
+            <view class="flex-cell-text flex-cell">站立?</view>
+            <view class="checkbox-container flex-cell">
+              <switch type="checkbox" checked="{{bmz}}" bindchange="relicStandB" />
+            </view>
+          </view>
+        </view>
+        <view class="flex-row flex-cell">
+          <view class="flex-column">
+            <view class="flex-cell-text flex-cell">遗骸2位置</view>
+            <view class="slider-container flex-cell">
+              <slider max="3" step="1" activeColor='#607d8b' value="" bindchange="" />
+            </view>
+          </view>
+          <view class="flex-column">
+            <view class="flex-cell-text flex-cell">站立?</view>
+            <view class="checkbox-container flex-cell">
+              <switch type="checkbox" checked="" bindchange="" />
+            </view>
+          </view>
         </view>
       </view>
     </view>
