@@ -417,7 +417,7 @@
         <view class="flex-column">
           <view class="flex-cell-text flex-cell">手动计算</view>
           <view class="checkbox-container flex-cell">
-            <switch type="checkbox" checked="{{!rAutoCompute}}" bindchange="TODO" />
+            <switch type="checkbox" checked="{{!rAutoCompute}}" bindchange="rAutoListener" />
           </view>
         </view>
       </view>
@@ -431,11 +431,11 @@
               </view>
             </view>
             <view class="flex-row flex-cell">
-              <view class="flex-cell" bindtap="TODO">
+              <view class="flex-cell" bindtap="rmfm">
                 <image class="counter-button" src="/images/mines.png"></image>
               </view>
               <view class="flex-cell">{{rmf}}</view>
-              <view class="flex-cell" bindtap="TODO">
+              <view class="flex-cell" bindtap="rmfa">
                 <image class="counter-button" src="/images/add.png"></image>
               </view>
             </view>
@@ -448,11 +448,11 @@
               </view>
             </view>
             <view class="flex-row flex-cell">
-              <view class="flex-cell" bindtap="TODO">
+              <view class="flex-cell" bindtap="rmrm">
                 <image class="counter-button" src="/images/mines.png"></image>
               </view>
               <view class="flex-cell">{{rmr}}</view>
-              <view class="flex-cell" bindtap="TODO">
+              <view class="flex-cell" bindtap="rmra">
                 <image class="counter-button" src="/images/add.png"></image>
               </view>
             </view>
@@ -468,11 +468,11 @@
               </view>
             </view>
             <view class="flex-row flex-cell">
-              <view class="flex-cell" bindtap="TODO">
+              <view class="flex-cell" bindtap="rmcm">
                 <image class="counter-button" src="/images/mines.png"></image>
               </view>
               <view class="flex-cell">{{rmc}}</view>
-              <view class="flex-cell" bindtap="TODO">
+              <view class="flex-cell" bindtap="rmca">
                 <image class="counter-button" src="/images/add.png"></image>
               </view>
             </view>
@@ -485,11 +485,11 @@
               </view>
             </view>
             <view class="flex-row flex-cell">
-              <view class="flex-cell" bindtap="TODO">
+              <view class="flex-cell" bindtap="rmWholeBoardm">
                 <image class="counter-button" src="/images/mines.png"></image>
               </view>
               <view class="flex-cell">{{rmWholeBoard}}</view>
-              <view class="flex-cell" bindtap="TODO">
+              <view class="flex-cell" bindtap="rmWholeBoarda">
                 <image class="counter-button" src="/images/add.png"></image>
               </view>
             </view>
@@ -547,7 +547,7 @@
         <view class="flex-column">
           <view class="flex-cell-text flex-cell">手动计算</view>
           <view class="checkbox-container flex-cell">
-            <switch type="checkbox" checked="{{!bAutoCompute}}" bindchange="TODO" />
+            <switch type="checkbox" checked="{{!bAutoCompute}}" bindchange="bAutoListener" />
           </view>
         </view>
       </view>
@@ -561,11 +561,11 @@
               </view>
             </view>
             <view class="flex-row flex-cell">
-              <view class="flex-cell" bindtap="TODO">
+              <view class="flex-cell" bindtap="bmfm">
                 <image class="counter-button" src="/images/mines.png"></image>
               </view>
               <view class="flex-cell">{{bmf}}</view>
-              <view class="flex-cell" bindtap="TODO">
+              <view class="flex-cell" bindtap="bmfa">
                 <image class="counter-button" src="/images/add.png"></image>
               </view>
             </view>
@@ -578,11 +578,11 @@
               </view>
             </view>
             <view class="flex-row flex-cell">
-              <view class="flex-cell" bindtap="TODO">
+              <view class="flex-cell" bindtap="bmrm">
                 <image class="counter-button" src="/images/mines.png"></image>
               </view>
               <view class="flex-cell">{{bmr}}</view>
-              <view class="flex-cell" bindtap="TODO">
+              <view class="flex-cell" bindtap="bmra">
                 <image class="counter-button" src="/images/add.png"></image>
               </view>
             </view>
@@ -598,11 +598,11 @@
               </view>
             </view>
             <view class="flex-row flex-cell">
-              <view class="flex-cell" bindtap="TODO">
+              <view class="flex-cell" bindtap="bmcm">
                 <image class="counter-button" src="/images/mines.png"></image>
               </view>
               <view class="flex-cell">{{bmc}}</view>
-              <view class="flex-cell" bindtap="TODO">
+              <view class="flex-cell" bindtap="bmca">
                 <image class="counter-button" src="/images/add.png"></image>
               </view>
             </view>
@@ -615,11 +615,11 @@
               </view>
             </view>
             <view class="flex-row flex-cell">
-              <view class="flex-cell" bindtap="TODO">
+              <view class="flex-cell" bindtap="bmWholeBoardm">
                 <image class="counter-button" src="/images/mines.png"></image>
               </view>
               <view class="flex-cell">{{bmWholeBoard}}</view>
-              <view class="flex-cell" bindtap="TODO">
+              <view class="flex-cell" bindtap="bmWholeBoarda">
                 <image class="counter-button" src="/images/add.png"></image>
               </view>
             </view>
