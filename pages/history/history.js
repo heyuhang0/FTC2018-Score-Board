@@ -37,13 +37,32 @@ Page({
       this.setData({
         results: (wx.getStorageSync('results') || []).map(result => {
           var color;
+          var pointer = 0;
           if (result[0] > result[1])
             color = "#e55c5c";
           else if (result[0] < result[1])
             color = "#5c8ee5";
           else
             color = "#607d8b";
-          return ({ message: result[0] + " : " + result[1], color: color, style:""});
+          return ({ 
+            message: result[pointer++] + " : " + result[pointer++], 
+            color: color,
+            style:"",
+            r0: result[pointer++], b0: result[pointer++],
+            r1: result[pointer++], b1: result[pointer++],
+            r2: result[pointer++], b2: result[pointer++], 
+            r3: result[pointer++], b3: result[pointer++], 
+            r4: result[pointer++], b4: result[pointer++], 
+            r5: result[pointer++], b5: result[pointer++], 
+            r6: result[pointer++], b6: result[pointer++],
+            r7: result[pointer++], b7: result[pointer++],
+            r8: result[pointer++], b8: result[pointer++],
+            r9: result[pointer++], b9: result[pointer++],
+            r10: result[pointer++], b10: result[pointer++],
+            r11: result[pointer++], b11: result[pointer++], 
+            r12: result[pointer++], b12: result[pointer++],
+            r13: result[pointer++], b13: result[pointer++], 
+          });
         }),
       })
     }

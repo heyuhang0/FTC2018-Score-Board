@@ -3,6 +3,90 @@
   <block wx:for="{{results}}" wx:for-item="result" wx:key="property" >
     <view class="card"  style="background-color: {{result.color}}">
       <text class="result-item" style="{{result.style}}">{{result.message}}</text>
+      <view class="table flex-column">
+        <view class="flex-row">
+          <view class="flex-cell flex-cell-1"></view>
+          <view class="flex-cell flex-cell-1">红方</view>
+          <view class="flex-cell flex-cell-1">蓝方</view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell flex-cell-1"></view>
+          <view class="flex-cell flex-cell-2">自动阶段</view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell flex-cell-1">珠宝数</view>
+          <view class="flex-cell flex-cell-1">{{result.r0}}</view>
+          <view class="flex-cell flex-cell-1">{{result.b0}}</view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell flex-cell-1">符文数</view>
+          <view class="flex-cell flex-cell-1">{{result.r1}}</view>
+          <view class="flex-cell flex-cell-1">{{result.b1}}</view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell flex-cell-1">停靠安全区</view>
+          <view class="flex-cell flex-cell-1">{{result.r2}}</view>
+          <view class="flex-cell flex-cell-1">{{result.b2}}</view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell flex-cell-1">破解密码数</view>
+          <view class="flex-cell flex-cell-1">{{result.r3}}</view>
+          <view class="flex-cell flex-cell-1">{{result.b3}}</view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell flex-cell-1"></view>
+          <view class="flex-cell flex-cell-2">手动阶段</view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell flex-cell-1">符文数(除自动)</view>
+          <view class="flex-cell flex-cell-1">{{result.r4}}</view>
+          <view class="flex-cell flex-cell-1">{{result.b4}}</view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell flex-cell-1">完成行</view>
+          <view class="flex-cell flex-cell-1">{{result.r5}}</view>
+          <view class="flex-cell flex-cell-1">{{result.b5}}</view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell flex-cell-1">完成列</view>
+          <view class="flex-cell flex-cell-1">{{result.r6}}</view>
+          <view class="flex-cell flex-cell-1">{{result.b6}}</view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell flex-cell-1">完成图腾数</view>
+          <view class="flex-cell flex-cell-1">{{result.r7}}</view>
+          <view class="flex-cell flex-cell-1">{{result.b7}}</view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell flex-cell-1">停靠平衡板</view>
+          <view class="flex-cell flex-cell-1">{{result.r8}}</view>
+          <view class="flex-cell flex-cell-1">{{result.b8}}</view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell flex-cell-1">遗骸1</view>
+          <view class="flex-cell flex-cell-1">{{result.r9}}</view>
+          <view class="flex-cell flex-cell-1">{{result.b9}}</view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell flex-cell-1">遗骸2</view>
+          <view class="flex-cell flex-cell-1">{{result.r10}}</view>
+          <view class="flex-cell flex-cell-1">{{result.b10}}</view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell flex-cell-1"></view>
+          <view class="flex-cell flex-cell-2">判罚</view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell flex-cell-1">轻判</view>
+          <view class="flex-cell flex-cell-1">{{result.r11}}</view>
+          <view class="flex-cell flex-cell-1">{{result.b11}}</view>
+        </view>
+        <view class="flex-row">
+          <view class="flex-cell flex-cell-1">重判</view>
+          <view class="flex-cell flex-cell-1">{{result.r12}}</view>
+          <view class="flex-cell flex-cell-1">{{result.b12}}</view>
+        </view>
+      </view>
     </view>
   </block>
 </view>

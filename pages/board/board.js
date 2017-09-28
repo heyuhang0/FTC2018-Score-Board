@@ -238,61 +238,113 @@ Page(
         timer(this, pause);
     },
     clearAll: function () {
-      redTotalScore = 0;
-      blueTotalScore = 0;
+      var that = this;
+      wx.showModal({
+        title: '确认删除?',
+        success: function (res) {
+          if (res.confirm) {
 
-      raz = 0;
-      raf = 0;
-      rat = 0;
-      rap = 0;
-      rapt = "***|***";
-      rmp = 0;
-      rmy = 0;
-      rmy2 = 0;
-      rmz = false;
-      rmz2 = false;
-      rmf = 0;
-      rmr = 0;
-      rmc = 0;
-      rmWholeBoard = 0;
-      rmMajorP = 0;
-      rmMinorP = 0;
-      rAutoCompute = true;
+            redTotalScore = 0;
+            blueTotalScore = 0;
 
-      baz = 0;
-      baf = 0;
-      bat = 0;
-      bap = 0;
-      bapt = "***|***";
-      bmp = 0;
-      bmy = 0;
-      bmy2 = 0;
-      bmz = false;
-      bmz2 = false;
-      bmf = 0;
-      bmr = 0;
-      bmc = 0;
-      bmWholeBoard = 0;
-      bmMajorP = 0;
-      bmMinorP = 0;
-      bAutoCompute = true;
+            raz = 0;
+            raf = 0;
+            rat = 0;
+            rap = 0;
+            rapt = "***|***";
+            rmp = 0;
+            rmy = 0;
+            rmy2 = 0;
+            rmz = false;
+            rmz2 = false;
+            rmf = 0;
+            rmr = 0;
+            rmc = 0;
+            rmWholeBoard = 0;
+            rmMajorP = 0;
+            rmMinorP = 0;
+            rAutoCompute = true;
 
-      rb1 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
-      rb2 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
-      bb1 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
-      bb2 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
+            baz = 0;
+            baf = 0;
+            bat = 0;
+            bap = 0;
+            bapt = "***|***";
+            bmp = 0;
+            bmy = 0;
+            bmy2 = 0;
+            bmz = false;
+            bmz2 = false;
+            bmf = 0;
+            bmr = 0;
+            bmc = 0;
+            bmWholeBoard = 0;
+            bmMajorP = 0;
+            bmMinorP = 0;
+            bAutoCompute = true;
 
-      stopTimer = true;
-      state = stop;
-      this.setData({
-        timer: "2:30 轻触开始计时",
+            rb1 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
+            rb2 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
+            bb1 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
+            bb2 = [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]];
+
+            stopTimer = true;
+            state = stop;
+            that.setData({
+              timer: "2:30 轻触开始计时",
+            });
+
+            that.refresh();
+          }
+        }
       });
-
-      this.refresh();
     },
     saveData: function () {
       var results = wx.getStorageSync('results') || []
-      results.unshift([redTotalScore, blueTotalScore]);
+      var redRelic1 = "无"
+      if (rmy > 0) {
+        redRelic1 = rmy + "区";
+        if (rmz) {
+          redRelic1 += "(站立)"
+        }
+      }
+      var redRelic2 = "无"
+      if (rmy2 > 0) {
+        redRelic2 = rmy2 + "区";
+        if (rmz2) {
+          redRelic2 += "(站立)"
+        }
+      }
+      var blueRelic1 = "无"
+      if (bmy > 0) {
+        blueRelic1 = bmy + "区";
+        if (bmz) {
+          blueRelic1 += "(站立)"
+        }
+      }
+      var blueRelic2 = "无"
+      if (bmy2 > 0) {
+        blueRelic2 = bmy2 + "区";
+        if (bmz2) {
+          blueRelic2 += "(站立)"
+        }
+      }
+      results.unshift(
+        [redTotalScore, blueTotalScore,
+          raz, baz,
+          raf, baf,
+          rat, bat,
+          rap, bap,
+          rmf - raf, bmf - baf,
+          rmr, bmr,
+          rmc, bmc,
+          rmWholeBoard, bmWholeBoard,
+          rmp, bmp,
+          redRelic1, blueRelic1,
+          redRelic2, blueRelic2,
+          rmMinorP, bmMinorP,
+          rmMajorP, bmMajorP
+        ]);
       wx.setStorageSync('results', results)
       wx.showToast({
         title: '已保存比分',

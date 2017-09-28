@@ -16,3 +16,33 @@
 .tip {
   font-size: small;
 }
+
+.table {
+  border: 1px solid white;
+  position: relative;
+  top: 10rpx;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-cell{
+  font-size: small;
+  padding: 5rpx;
+}
+
+.flex-cell-1{
+  flex: 1;
+}
+
+.flex-cell-2{
+  flex: 2;
+}
