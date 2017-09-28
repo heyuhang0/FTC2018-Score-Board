@@ -22,8 +22,10 @@
     <view class="flex-cell flex-column about">
       <text class="flex-cell flex-row about">版本号: 2.1.0\n</text>
       <text class="flex-cell flex-row about">作者: heyuhang0\n</text>
+      <text class="flex-cell flex-row about">邮箱: heyuhang0@outlook.com\n</text>
       <text class="flex-cell flex-row about">隶属于: 成都石室中学UST队\n</text>
       <text class="flex-cell flex-row about">项目地址: https://github.com/heyuhang0/FTC2018-Score-Board</text>
+      <text class="flex-cell flex-row about">反馈问题: https://github.com/heyuhang0/FTC2018-Score-Board/issues</text>
     </view>
   </view>
 </view>
