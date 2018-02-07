@@ -1978,3 +1978,91 @@ Page(
 
     }
   })
+
+/* js代码生成程序(Java)
+  public class AutoCodingForScoreBoard {
+
+    public static void main(String[] args) {
+        p("// data下的初始化语句");
+        for (int a = 1; a <= 2; a++) {
+            for (int b = 0; b < 4; b++) {
+                for (int c = 0; c < 3; c++) {
+                    p("rb" + a + b + c + ": 0,");
+                }
+            }
+        }
+        for (int a = 1; a <= 2; a++) {
+            for (int b = 0; b < 4; b++) {
+                for (int c = 0; c < 3; c++) {
+                    p("bb" + a + b + c + ": 0,");
+                }
+            }
+        }
+        p("// 有关函数");
+        p("refreshBoard: function () {");
+        p(" this.setData({");
+        for (int a = 1; a <= 2; a++) {
+            for (int b = 0; b < 4; b++) {
+                for (int c = 0; c < 3; c++) {
+                    p("  rb" + a + b + c + ": rb" + a + "[" + b + "][" + c + "],");
+                }
+            }
+        }
+        for (int a = 1; a <= 2; a++) {
+            for (int b = 0; b < 4; b++) {
+                for (int c = 0; c < 3; c++) {
+                    p("  bb" + a + b + c + ": bb" + a + "[" + b + "][" + c + "],");
+                }
+            }
+        }
+        p(" })");
+        p("},");
+        for (int a = 1; a <= 2; a++) {
+            for (int b = 0; b < 4; b++) {
+                for (int c = 0; c < 3; c++) {
+                    p("rb" + a + b + c + ": function () {");
+                    p("  if(rAutoCompute) {\n" +
+                            "   if(rb"+a+"["+b+"]["+c+"] == 0)\r\n" +
+                            "     rb"+a+"["+b+"]["+c+"] = boardColor1;\r\n" +
+                            "   else if(rb"+a+"["+b+"]["+c+"] == boardColor1)\r\n" +
+                            "     rb"+a+"["+b+"]["+c+"] = boardColor2;\r\n" +
+                            "   else\r\n" +
+                            "     rb"+a+"["+b+"]["+c+"] = 0;\r\n" +
+                            "  }\n" +
+                            "  else {\n" +
+                            "   this.showDisableWarning();\n" +
+                            "  }\n" +
+                            "  this.refresh();\r\n" +
+                            " },"
+                            );
+                }
+            }
+        }
+        for (int a = 1; a <= 2; a++) {
+            for (int b = 0; b < 4; b++) {
+                for (int c = 0; c < 3; c++) {
+                    p("bb" + a + b + c + ": function () {");
+                    p("  if(bAutoCompute) {\n" +
+                            "  if(bb"+a+"["+b+"]["+c+"] == 0)\r\n" +
+                            "    bb"+a+"["+b+"]["+c+"] = boardColor1;\r\n" +
+                            "  else if(bb"+a+"["+b+"]["+c+"] == boardColor1)\r\n" +
+                            "    bb"+a+"["+b+"]["+c+"] = boardColor2;\r\n" +
+                            "  else\r\n" +
+                            "    bb"+a+"["+b+"]["+c+"] = 0;\r\n" +
+                            "  }\n" +
+                            "  else {\n" +
+                            "   this.showDisableWarning();\n" +
+                            "  }\n" +
+                            "  this.refresh();\r\n" +
+                            " },"
+                            );
+                }
+            }
+        }
+    }
+
+    static void p(String s) {
+        System.out.println(s);
+    }
+  }
+*/
