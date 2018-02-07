@@ -14,12 +14,12 @@
           <view class="flex-cell flex-cell-2">自动阶段</view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell flex-cell-1">珠宝数</view>
+          <view class="flex-cell flex-cell-1">宝石数</view>
           <view class="flex-cell flex-cell-1">{{result.r0}}</view>
           <view class="flex-cell flex-cell-1">{{result.b0}}</view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell flex-cell-1">符文数</view>
+          <view class="flex-cell flex-cell-1">字块数</view>
           <view class="flex-cell flex-cell-1">{{result.r1}}</view>
           <view class="flex-cell flex-cell-1">{{result.b1}}</view>
         </view>
@@ -38,7 +38,7 @@
           <view class="flex-cell flex-cell-2">手动阶段</view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell flex-cell-1">符文数(除自动)</view>
+          <view class="flex-cell flex-cell-1">字块数(除自动)</view>
           <view class="flex-cell flex-cell-1">{{result.r4}}</view>
           <view class="flex-cell flex-cell-1">{{result.b4}}</view>
         </view>
@@ -53,22 +53,22 @@
           <view class="flex-cell flex-cell-1">{{result.b6}}</view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell flex-cell-1">完成图腾数</view>
+          <view class="flex-cell flex-cell-1">密码图案数</view>
           <view class="flex-cell flex-cell-1">{{result.r7}}</view>
           <view class="flex-cell flex-cell-1">{{result.b7}}</view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell flex-cell-1">停靠平衡板</view>
+          <view class="flex-cell flex-cell-1">停靠平衡石</view>
           <view class="flex-cell flex-cell-1">{{result.r8}}</view>
           <view class="flex-cell flex-cell-1">{{result.b8}}</view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell flex-cell-1">遗骸1</view>
+          <view class="flex-cell flex-cell-1">文物1</view>
           <view class="flex-cell flex-cell-1">{{result.r9}}</view>
           <view class="flex-cell flex-cell-1">{{result.b9}}</view>
         </view>
         <view class="flex-row">
-          <view class="flex-cell flex-cell-1">遗骸2</view>
+          <view class="flex-cell flex-cell-1">文物2</view>
           <view class="flex-cell flex-cell-1">{{result.r10}}</view>
           <view class="flex-cell flex-cell-1">{{result.b10}}</view>
         </view>

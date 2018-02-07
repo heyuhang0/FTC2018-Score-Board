@@ -1,7 +1,7 @@
 <view class="container">
   <view class="card flex-column">
     <view class="flex-cell">
-      <text>密码表</text>
+      <text>壁画样式</text>
     </view>
     <view class="flex-cell flex-row">
       <image class="flex-cell" mode="scaleToFill" src="/images/password.jpg"/>
@@ -20,7 +20,7 @@
       <text>关于</text>
     </view>
     <view class="flex-cell flex-column about">
-      <text class="flex-cell flex-row about">版本号: 2.1.1\n</text>
+      <text class="flex-cell flex-row about">版本号: 2.1.2\n</text>
       <text class="flex-cell flex-row about">作者: 成都石室中学UST4997\n</text>
       <text class="flex-cell flex-row about">项目地址: https://github.com/heyuhang0/FTC2018-Score-Board</text>
       <text class="flex-cell flex-row about">反馈问题: https://github.com/heyuhang0/FTC2018-Score-Board/issues</text>

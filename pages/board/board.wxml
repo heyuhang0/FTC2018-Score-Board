@@ -15,7 +15,7 @@
       <view class="flex-cell flex-column">
         <view class="flex-row flex-cell">
           <view class="flex-cell-text">
-            珠宝
+            宝石
           </view>
         </view>
         <view class="flex-row flex-cell">
@@ -31,7 +31,7 @@
       <view class="flex-cell">
         <view class="flex-row flex-cell">
           <view class="flex-cell-text">
-            符文
+            字块
           </view>
         </view>
         <view class="flex-row flex-cell">
@@ -83,7 +83,7 @@
       <view class="flex-cell flex-column">
         <view class="flex-row flex-cell">
           <view class="flex-cell-text">
-            珠宝
+            宝石
           </view>
         </view>
         <view class="flex-row flex-cell">
@@ -99,7 +99,7 @@
       <view class="flex-cell">
         <view class="flex-row flex-cell">
           <view class="flex-cell-text">
-            符文
+            字块
           </view>
         </view>
         <view class="flex-row flex-cell">
@@ -150,7 +150,7 @@
     <view class="flex-row flex-cell">
       <view class="flex-column flex-cell">
         <view class="flex-row flex-cell">
-          <view class="flex-cell-text">符文板1</view>
+          <view class="flex-cell-text">密码箱1</view>
         </view>
         <view class="flex-row">
           <view class="flex-cell-fw" style="background-color: {{rb100}};" bindtap="rb100"></view>
@@ -175,7 +175,7 @@
       </view>
       <view class="flex-column flex-cell">
         <view class="flex-row flex-cell">
-          <view class="flex-cell-text">符文板2</view>
+          <view class="flex-cell-text">密码箱2</view>
         </view>
         <view class="flex-row">
           <view class="flex-cell-fw" style="background-color: {{rb200}};" bindtap="rb200"></view>
@@ -208,7 +208,7 @@
     <view class="flex-row flex-cell">
       <view class="flex-column flex-cell">
         <view class="flex-row flex-cell">
-          <view class="flex-cell-text">符文板1</view>
+          <view class="flex-cell-text">密码箱1</view>
         </view>
         <view class="flex-row">
           <view class="flex-cell-fw" style="background-color: {{bb100}};" bindtap="bb100"></view>
@@ -233,7 +233,7 @@
       </view>
       <view class="flex-column flex-cell">
         <view class="flex-row flex-cell">
-          <view class="flex-cell-text">符文板2</view>
+          <view class="flex-cell-text">密码箱2</view>
         </view>
         <view class="flex-row">
           <view class="flex-cell-fw" style="background-color: {{bb200}};" bindtap="bb200"></view>
@@ -427,7 +427,7 @@
           <view class="flex-cell flex-column">
             <view class="flex-row flex-cell">
               <view class="flex-cell-text">
-                符文总数
+                字块总数
               </view>
             </view>
             <view class="flex-row flex-cell">
@@ -557,7 +557,7 @@
           <view class="flex-cell flex-column">
             <view class="flex-row flex-cell">
               <view class="flex-cell-text">
-                符文总数
+                字块总数
               </view>
             </view>
             <view class="flex-row flex-cell">

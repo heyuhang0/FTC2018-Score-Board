@@ -81,8 +81,8 @@ var raptt = "破解密码";
 var rmp = 0;
 var rmy = 0;
 var rmy2 = 0;
-var rmyt = "遗骸1位置";
-var rmyt2 = "遗骸2位置"
+var rmyt = "文物1位置";
+var rmyt2 = "文物2位置"
 var rmz = false;
 var rmz2 = false;
 var rmf = 0;
@@ -102,8 +102,8 @@ var baptt = "破解密码";
 var bmp = 0;
 var bmy = 0;
 var bmy2 = 0;
-var bmyt = "遗骸1位置";
-var bmyt2 = "遗骸2位置"
+var bmyt = "文物1位置";
+var bmyt2 = "文物2位置"
 var bmz = false;
 var bmz2 = false;
 var bmf = 0;
@@ -140,8 +140,8 @@ Page(
       rmp: 0,
       rmy: 0,
       rmy2: 0,
-      rmyt: "遗骸1位置",
-      rmyt2: "遗骸2位置",
+      rmyt: "文物1位置",
+      rmyt2: "文物2位置",
       rmz: false,
       rmz2: false,
       rmf: rmf,
@@ -161,8 +161,8 @@ Page(
       bmp: 0,
       bmy: 0,
       bmy2: 0,
-      bmyt: "遗骸1位置",
-      bmyt2: "遗骸2位置",
+      bmyt: "文物1位置",
+      bmyt2: "文物2位置",
       bmz: false,
       bmz2: false,
       bmf: bmf,
@@ -176,7 +176,7 @@ Page(
       rTip: "",
       bTip: "",
       timer: "2:30 轻触开始计时",
-      // 自动生成的控制符文板的垃圾代码
+      // 自动生成的控制密码箱的垃圾代码
       rb100: 0,
       rb101: 0,
       rb102: 0,
@@ -357,36 +357,36 @@ Page(
       redTotalScore += this.computeBoardScoreRed();
       switch (rmy) {
         case 0:
-          rmyt = "遗骸1位置"
+          rmyt = "文物1位置"
           break;
         case 1:
           redTotalScore += 10;
-          rmyt = "遗骸1在1区"
+          rmyt = "文物1在1区"
           break;
         case 2:
           redTotalScore += 20;
-          rmyt = "遗骸1在2区"
+          rmyt = "文物1在2区"
           break;
         case 3:
           redTotalScore += 40;
-          rmyt = "遗骸1在3区"
+          rmyt = "文物1在3区"
           break;
       }
       switch (rmy2) {
         case 0:
-          rmyt2 = "遗骸2位置"
+          rmyt2 = "文物2位置"
           break;
         case 1:
           redTotalScore += 10;
-          rmyt2 = "遗骸2在1区"
+          rmyt2 = "文物2在1区"
           break;
         case 2:
           redTotalScore += 20;
-          rmyt2 = "遗骸2在2区"
+          rmyt2 = "文物2在2区"
           break;
         case 3:
           redTotalScore += 40;
-          rmyt2 = "遗骸2在3区"
+          rmyt2 = "文物2在3区"
           break;
       }
       if (rmz) {
@@ -427,36 +427,36 @@ Page(
       blueTotalScore += this.computeBoardScoreBlue();
       switch (bmy) {
         case 0:
-          bmyt = "遗骸1位置";
+          bmyt = "文物1位置";
           break;
         case 1:
           blueTotalScore += 10;
-          bmyt = "遗骸1在1区";
+          bmyt = "文物1在1区";
           break;
         case 2:
           blueTotalScore += 20;
-          bmyt = "遗骸1在2区";
+          bmyt = "文物1在2区";
           break;
         case 3:
           blueTotalScore += 40;
-          bmyt = "遗骸1在3区";
+          bmyt = "文物1在3区";
           break;
       }
       switch (bmy2) {
         case 0:
-          bmyt2 = "遗骸2位置";
+          bmyt2 = "文物2位置";
           break;
         case 1:
           blueTotalScore += 10;
-          bmyt2 = "遗骸2在1区";
+          bmyt2 = "文物2在1区";
           break;
         case 2:
           blueTotalScore += 20;
-          bmyt2 = "遗骸2在2区";
+          bmyt2 = "文物2在2区";
           break;
         case 3:
           blueTotalScore += 40;
-          bmyt2 = "遗骸2在3区";
+          bmyt2 = "文物2在3区";
           break;
       }
       if (bmz) {
@@ -495,14 +495,14 @@ Page(
 
       var rTip = "";
       if (rbsum < raf) {
-        rTip = "(请填补自动程序的符文板,还剩" + (raf - rbsum) + "个)";
+        rTip = "(请填补自动程序的字块,还剩" + (raf - rbsum) + "个)";
       }
       if (!rAutoCompute) {
         rTip = "(已禁用)";
       }
       var bTip = "";
       if (bbsum < baf) {
-        bTip = "(请填补自动程序的符文板,还剩" + (baf - bbsum) + "个)";
+        bTip = "(请填补自动程序的字块,还剩" + (baf - bbsum) + "个)";
       }
       if (!bAutoCompute) {
         bTip = "(已禁用)";
@@ -619,7 +619,7 @@ Page(
         var that = this;
         wx.showModal({
           title: '注意',
-          content: '打开后将禁用符文板自动计分功能，且无法关闭(清空后将复原)',
+          content: '打开后将禁用密码箱自动计分功能，且无法关闭(清空后将复原)',
           success: function (res) {
             if (res.confirm) {
               rAutoCompute = false;
@@ -833,7 +833,7 @@ Page(
         var that = this;
         wx.showModal({
           title: '注意',
-          content: '打开后将禁用符文板自动计分功能，且无法关闭(清空后将复原)',
+          content: '打开后将禁用密码箱自动计分功能，且无法关闭(清空后将复原)',
           success: function (res) {
             if (res.confirm) {
               bAutoCompute = false;
@@ -941,7 +941,7 @@ Page(
         })
       }
     },
-    //符文板======================================================================================
+    //密码箱======================================================================================
     compare: function (a, b) {
       var isEqual = true;
       for (var row in a) {
