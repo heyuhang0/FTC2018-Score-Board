@@ -1926,7 +1926,18 @@ Page(
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      // 这怎么可能是bug
+      var date = new Date();
+      var month = date.getMonth();
+      var day = date.getDate();
+      if (month == 3 && day == 18) {
+        wx.showModal({
+          title: '',
+          content: '今天是UST最帅那位的生日',
+          showCancel: false,
+          confirmText: '生日快乐'
+        });
+      }
     },
 
     /**

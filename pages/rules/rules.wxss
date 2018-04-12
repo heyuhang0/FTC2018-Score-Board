@@ -28,6 +28,9 @@
   padding: 5rpx;
 }
 
+.map {
+  height: 600rpx;
+}
 .about {
   word-wrap: break-all;
   word-break: normal;
